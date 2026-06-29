@@ -1,0 +1,33 @@
+{
+  "id": "open-gardening-guides-arch-002",
+  "title": "ADRs: data format (decide first), UI framework + SW tooling, hosting, print/low-bandwidth budget",
+  "project": "open-gardening-guides",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["food-security", "agriculture", "software", "climate"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "open-gardening-guides publishes deterministic, source-cited, climate-zone-aware food-growing guidance as an open dataset rendered by a static, offline-capable, accessible site. Foundational architecture decisions must be recorded before schemas and the climate-zone engine are built. Per the plan, the data-format ADR is decided FIRST because the crop/zone schemas and the engine depend on it.",
+  "objective": "Record ADRs for: (1) data format and how citations/review status are enforced in CI (decided first); (2) UI framework + service-worker tooling weighted for accessibility, bundle size, offline support, and i18n/RTL; (3) static hosting target and versioned update strategy; (4) print/export approach and a low-bandwidth/precache budget.",
+  "acceptanceCriteria": [
+    "Data-format ADR is recorded and explicitly marked as the decision that gates the crop/zone/calendar schemas (data-004) and the engine (engine-005)",
+    "ADR specifies how source citations and review/approval status are enforced at build time (CI), including rejection of units missing citations or with approvedBy == reviewedBy",
+    "UI-framework + service-worker ADR documents accessibility, bundle-size, offline, and i18n/RTL support as weighted criteria",
+    "Hosting ADR selects a static host (no app server) and a versioned cache/update strategy so users are not stuck on stale guidance",
+    "Print/export ADR defines a client-side printable output and an explicit low-bandwidth/precache budget",
+    "Each ADR records context, options considered, decision, and consequences; committed in-repo"
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\open-gardening-guides\\PLAN.md",
+    "C:\\code\\elyos\\packages\\schema\\src\\schemas.ts",
+    "https://www.w3.org/WAI/WCAG22/quickref/"
+  ],
+  "output": "A document (set of ADRs) recording the data-format (decided first), UI-framework + SW-tooling, hosting/update, and print/low-bandwidth decisions, committed to the repo as the architectural baseline for M0.",
+  "requestor": "TBD",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
